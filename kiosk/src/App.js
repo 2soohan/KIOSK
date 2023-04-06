@@ -4,8 +4,7 @@ import Router from './router/index'
 function App() {
   return (
     <>
-    <Router/>
-    <div>123</div>
+      <Router/>
     </>
   );
 }
