@@ -1,7 +1,14 @@
 const express = require('express');
 const mysql = require('mysql2');
+const cors = require('cors');
 
 const app = express();
+//app.use(cors());
+app.use(
+    cors({
+      origin: 'http://localhost:3001', // Replace with your client's domain
+    })
+  );
 const port = 3000;
 
 const db = mysql.createConnection({
