@@ -85,9 +85,9 @@ const Room = ()=>{
             <>
                 <Paper>
                     <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    indicatorColor="primary"
+                        value={value}
+                        onChange={handleChange}
+                        indicatorColor="primary"
                     >
                         {room&&(
                             room.map((item,index)=>{
@@ -120,11 +120,18 @@ const Room = ()=>{
         )
     }
     //#endregion 네비바 값에 일치하는 패널
- 
+    const testJson = async()=>{
+        //const fs = require('fs');
+        const { default: markdown } = await import('../common/json/RoomList.json')
+        console.log(markdown)
+    }
     return(
         <>
             <NavBar/>
             <LocPanel/>
+            <Button onClick={(e)=>{
+                testJson()
+            }}>test</Button>
         </>
     )
 
